@@ -1,0 +1,6 @@
+{
+  "name": "Bismillah Steel Fabrication",
+  "description": "Custom architectural and structural steel fabrication serving architects, builders, and homeowners across Pakistan, operating 24 hours.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

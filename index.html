@@ -1,0 +1,3437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bismillah Steel Fabrication | Custom Architectural &amp; Structural Steel Pakistan</title>
+    <meta
+      name="description"
+      content="24-hour custom steel fabrication for architects, builders, and homeowners across Pakistan. Precision gates, cantilevered stairs, commercial facades, and structural steel."
+    />
+    <meta property="og:title" content="Bismillah Steel Fabrication | Custom Steel Work Across Pakistan" />
+    <meta
+      property="og:description"
+      content="24-hour custom steel fabrication for architects, builders, and homeowners across Pakistan."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ==========================================================================
+         1. Design Tokens & Base Setup
+         ========================================================================== */
+      :root {
+        --bg-gunmetal: #121417;
+        --bg-slate: #1b1f24;
+        --bg-slate-hover: #23282f;
+        --bg-offwhite: #f6f7f8;
+        --bg-subtle: #edf0f3;
+        --bg-white: #ffffff;
+
+        --text-primary: #121417;
+        --text-secondary: #4a5562;
+        --text-muted: #52606d;
+        --text-placeholder: #7b8794;
+        --text-on-dark: #ffffff;
+        --text-on-dark-muted: #cbd2d9;
+        --text-on-dark-subtle: #9aa5b1;
+
+        --accent-copper: #c86d2d;
+        --accent-copper-hover: #dc7c38;
+        --accent-copper-light: #e38849;
+        --accent-copper-text: #9e4c14;
+
+        --border-light: #d5dce2;
+        --border-subtle: #e2e7ec;
+        --border-hairline: #e6eaef;
+        --border-dark: rgba(255, 255, 255, 0.12);
+        --border-dark-strong: rgba(255, 255, 255, 0.2);
+
+        --status-error: #b42318;
+        --status-success: #1f6f43;
+
+        --font-display: "Archivo", ui-sans-serif, system-ui, -apple-system, sans-serif;
+        --font-sans: "Public Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+        --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+        --radius-sm: 2px;
+        --container-max: 80rem;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: var(--font-sans);
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      body {
+        margin: 0;
+        background-color: var(--bg-offwhite);
+        color: var(--text-primary);
+        line-height: 1.5;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body ::selection {
+        background-color: rgba(200, 109, 45, 0.2);
+        color: var(--text-primary);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul,
+      ol,
+      dl,
+      dd,
+      fieldset {
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-display);
+      }
+
+      ul,
+      ol {
+        padding: 0;
+        list-style: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+        color: inherit;
+      }
+
+      button {
+        cursor: pointer;
+        background: none;
+        border: 0;
+      }
+
+      img,
+      svg {
+        display: block;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .mono-tabular {
+        font-family: var(--font-mono);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container-max);
+        margin-inline: auto;
+        padding-inline: 1rem;
+      }
+
+      @media (min-width: 640px) {
+        .container {
+          padding-inline: 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          padding-inline: 2rem;
+        }
+      }
+
+      /* ==========================================================================
+         2. Top Navigation Bar & Mobile Drawer
+         ========================================================================== */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: rgba(18, 20, 23, 0.96);
+        backdrop-filter: blur(6px);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        height: 4rem;
+      }
+
+      .brand-link {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--text-on-dark);
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      @media (min-width: 640px) {
+        .brand-link {
+          font-size: 1.125rem;
+        }
+      }
+
+      .brand-link:focus-visible,
+      .nav-link:focus-visible {
+        outline: 2px solid var(--accent-copper-light);
+        outline-offset: 4px;
+      }
+
+      .desktop-nav {
+        display: none;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .desktop-nav {
+          display: flex;
+        }
+      }
+
+      .nav-link {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-on-dark-muted);
+        white-space: nowrap;
+        flex-shrink: 0;
+        text-underline-offset: 8px;
+        transition: color 150ms ease;
+      }
+
+      .nav-link:hover {
+        color: var(--text-on-dark);
+        text-decoration: underline;
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      .btn-copper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-height: 40px;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        background-color: var(--accent-copper);
+        color: var(--bg-gunmetal);
+        font-size: 0.875rem;
+        font-weight: 600;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease;
+      }
+
+      .btn-copper:hover:not(:disabled) {
+        background-color: var(--accent-copper-hover);
+      }
+
+      .btn-copper:focus-visible {
+        outline: 2px solid var(--text-on-dark);
+        outline-offset: 2px;
+      }
+
+      .header-quote-desktop {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .header-quote-desktop {
+          display: inline-flex;
+        }
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: var(--bg-slate);
+        color: var(--text-on-dark);
+        transition: border-color 150ms ease;
+      }
+
+      .mobile-menu-btn:hover {
+        border-color: var(--accent-copper);
+      }
+
+      .mobile-menu-btn:focus-visible {
+        outline: 2px solid var(--accent-copper-light);
+        outline-offset: 2px;
+      }
+
+      @media (min-width: 768px) {
+        .mobile-menu-btn {
+          display: none;
+        }
+      }
+
+      .mobile-drawer {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: var(--bg-slate);
+        padding: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .mobile-drawer {
+          display: none !important;
+        }
+      }
+
+      .mobile-nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding-inline: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 1rem;
+        font-weight: 500;
+        color: #e4e7eb;
+        transition: color 150ms ease;
+      }
+
+      .mobile-nav-link:hover {
+        color: var(--text-on-dark);
+      }
+
+      .mobile-drawer-cta {
+        padding-top: 0.75rem;
+      }
+
+      .mobile-drawer-cta .btn-copper {
+        width: 100%;
+        min-height: 44px;
+      }
+
+      /* ==========================================================================
+         3. Hero Section
+         ========================================================================== */
+      .hero-section {
+        background-color: var(--bg-gunmetal);
+        color: var(--text-on-dark);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .hero-container {
+        padding-top: 2.5rem;
+        padding-bottom: 3rem;
+      }
+
+      @media (min-width: 1024px) {
+        .hero-container {
+          padding-top: 3.5rem;
+          padding-bottom: 4rem;
+        }
+      }
+
+      .hero-split {
+        display: grid;
+        gap: 2rem;
+        align-items: stretch;
+      }
+
+      @media (min-width: 1024px) {
+        .hero-split {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          gap: 2.5rem;
+        }
+      }
+
+      .hero-copy-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      @media (min-width: 1024px) {
+        .hero-copy-col {
+          grid-column: span 6 / span 6;
+        }
+      }
+
+      .hero-kicker {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.025em;
+        color: var(--accent-copper-light);
+        text-wrap: balance;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .hero-title {
+        margin-top: 1rem;
+        max-width: 36rem;
+        font-size: clamp(2.25rem, 4vw, 3.5rem);
+        line-height: 1.08;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text-on-dark);
+        text-wrap: balance;
+      }
+
+      .hero-description {
+        margin-top: 1.25rem;
+        max-width: 36rem;
+        font-size: 1rem;
+        line-height: 1.625;
+        color: var(--text-on-dark-muted);
+      }
+
+      @media (min-width: 640px) {
+        .hero-description {
+          font-size: 1.125rem;
+        }
+      }
+
+      .hero-cta-row {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .btn-hero-primary {
+        min-height: 46px;
+        padding: 0.75rem 1.5rem;
+      }
+
+      .btn-hero-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0.75rem 1.25rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-dark-strong);
+        background-color: var(--bg-slate);
+        color: var(--text-on-dark);
+        font-size: 0.875rem;
+        font-weight: 500;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: border-color 150ms ease, background-color 150ms ease;
+      }
+
+      .btn-hero-secondary:hover {
+        border-color: rgba(255, 255, 255, 0.4);
+        background-color: var(--bg-slate-hover);
+      }
+
+      .btn-hero-secondary:focus-visible {
+        outline: 2px solid var(--accent-copper-light);
+        outline-offset: 2px;
+      }
+
+      .hero-footnote {
+        margin-top: 2.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.25rem;
+      }
+
+      .hero-footnote p {
+        font-size: 0.75rem;
+        line-height: 1.625;
+        color: var(--text-on-dark-subtle);
+      }
+
+      @media (min-width: 1024px) {
+        .hero-media-col {
+          grid-column: span 6 / span 6;
+        }
+      }
+
+      .hero-media-frame {
+        position: relative;
+        width: 100%;
+        height: 18rem;
+        overflow: hidden;
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: var(--bg-slate);
+      }
+
+      @media (min-width: 640px) {
+        .hero-media-frame {
+          height: 24rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .hero-media-frame {
+          height: 100%;
+          min-height: 420px;
+        }
+      }
+
+      .hero-media-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-scrim {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+          to top,
+          rgba(18, 20, 23, 0.85) 0%,
+          rgba(18, 20, 23, 0.2) 50%,
+          transparent 100%
+        );
+      }
+
+      .hero-media-caption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: rgba(18, 20, 23, 0.85);
+        padding: 0.875rem 1.25rem;
+        backdrop-filter: blur(4px);
+      }
+
+      .hero-media-caption-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        color: #e4e7eb;
+      }
+
+      .hero-media-caption-title {
+        font-weight: 500;
+        color: var(--text-on-dark);
+      }
+
+      .hero-media-caption-shift {
+        font-family: var(--font-mono);
+        color: var(--accent-copper-light);
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* Architectural SVG Fallback Container */
+      .svg-fallback {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1b1f24 0%, #121417 100%);
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .svg-fallback svg {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+      }
+
+      .svg-fallback-title {
+        margin-top: 0.75rem;
+        font-family: var(--font-display);
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-on-dark);
+      }
+
+      .svg-fallback-sub {
+        margin-top: 0.25rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-on-dark-subtle);
+      }
+
+      /* 4-Column Spec Strip */
+      .spec-strip {
+        margin-top: 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: var(--bg-slate);
+      }
+
+      @media (min-width: 640px) {
+        .spec-strip {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .spec-strip {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .spec-cell {
+        padding: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .spec-cell:last-child {
+        border-bottom: 0;
+      }
+
+      @media (min-width: 640px) {
+        .spec-cell:nth-child(odd) {
+          border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .spec-cell:nth-child(3),
+        .spec-cell:nth-child(4) {
+          border-bottom: 0;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .spec-cell {
+          border-bottom: 0;
+          border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .spec-cell:last-child {
+          border-right: 0;
+        }
+      }
+
+      .spec-label {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--text-on-dark-subtle);
+      }
+
+      .spec-value {
+        margin-top: 0.375rem;
+        font-family: var(--font-mono);
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-on-dark);
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ==========================================================================
+         4. Shared Section Headings
+         ========================================================================== */
+      .section-pad {
+        padding-block: 4rem;
+      }
+
+      @media (min-width: 1024px) {
+        .section-pad {
+          padding-block: 6rem;
+        }
+      }
+
+      .section-kicker-light {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.025em;
+        color: var(--accent-copper-text);
+      }
+
+      .section-kicker-dark {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.025em;
+        color: var(--accent-copper-light);
+      }
+
+      .section-heading {
+        margin-top: 0.5rem;
+        font-size: 1.875rem;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+
+      @media (min-width: 640px) {
+        .section-heading {
+          font-size: 2.25rem;
+        }
+      }
+
+      .section-lead {
+        margin-top: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.625;
+        color: var(--text-secondary);
+      }
+
+      /* ==========================================================================
+         5. Audience & Capabilities Section
+         ========================================================================== */
+      .capabilities-section {
+        border-bottom: 1px solid #d8dee4;
+        background-color: var(--bg-offwhite);
+      }
+
+      .audience-box {
+        margin-top: 2.5rem;
+        border: 1px solid var(--border-light);
+        background-color: var(--bg-white);
+      }
+
+      .audience-tablist {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-bottom: 1px solid var(--border-light);
+        background-color: var(--bg-subtle);
+      }
+
+      @media (min-width: 640px) {
+        .audience-tablist {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .audience-tab {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 48px;
+        padding: 0.875rem 1.25rem;
+        border-bottom: 1px solid var(--border-light);
+        text-align: left;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        white-space: nowrap;
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .audience-tab:last-child {
+        border-bottom: 0;
+      }
+
+      @media (min-width: 640px) {
+        .audience-tab {
+          border-bottom: 0;
+          border-right: 1px solid var(--border-light);
+        }
+        .audience-tab:last-child {
+          border-right: 0;
+        }
+      }
+
+      .audience-tab:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+        color: var(--text-primary);
+      }
+
+      .audience-tab[aria-selected="true"] {
+        background-color: var(--bg-white);
+        color: var(--text-primary);
+        box-shadow: inset 0 -2px 0 0 var(--accent-copper);
+      }
+
+      .audience-tab:focus-visible {
+        outline: 2px solid var(--text-primary);
+        outline-offset: -2px;
+      }
+
+      .audience-tab-num {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-variant-numeric: tabular-nums;
+        color: #6b7785;
+      }
+
+      .audience-tab[aria-selected="true"] .audience-tab-num {
+        color: var(--accent-copper-text);
+      }
+
+      .audience-panel {
+        display: grid;
+        gap: 2rem;
+        padding: 1.5rem;
+      }
+
+      @media (min-width: 640px) {
+        .audience-panel {
+          padding: 2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .audience-panel {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+          align-items: start;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .audience-panel-main {
+          grid-column: span 6 / span 6;
+        }
+        .audience-panel-deliverables {
+          grid-column: span 6 / span 6;
+          border-top: 0 !important;
+          border-left: 1px solid var(--border-subtle);
+          padding-top: 0 !important;
+          padding-left: 2rem;
+        }
+      }
+
+      .audience-panel-heading {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--text-primary);
+        text-wrap: balance;
+      }
+
+      .audience-panel-summary {
+        margin-top: 0.75rem;
+        font-size: 1rem;
+        line-height: 1.625;
+        color: var(--text-secondary);
+      }
+
+      .audience-actions {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .btn-dark {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 44px;
+        padding: 0.625rem 1.25rem;
+        border-radius: var(--radius-sm);
+        background-color: var(--bg-gunmetal);
+        color: var(--text-on-dark);
+        font-size: 0.875rem;
+        font-weight: 600;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease;
+      }
+
+      .btn-dark:hover {
+        background-color: var(--bg-slate-hover);
+      }
+
+      .btn-dark:focus-visible {
+        outline: 2px solid var(--accent-copper);
+        outline-offset: 2px;
+      }
+
+      .audience-coord-note {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--accent-copper-text);
+      }
+
+      .audience-panel-deliverables {
+        border-top: 1px solid var(--border-subtle);
+        padding-top: 1.5rem;
+      }
+
+      .deliverables-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.025em;
+        color: var(--text-muted);
+      }
+
+      .deliverables-list {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.875rem;
+      }
+
+      .deliverables-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: #1f2933;
+      }
+
+      .deliverables-icon {
+        margin-top: 0.125rem;
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+        color: var(--accent-copper-text);
+      }
+
+      /* Core Capabilities Sub-grid */
+      .capabilities-sub {
+        margin-top: 3.5rem;
+      }
+
+      .capabilities-sub-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 1rem;
+      }
+
+      .capabilities-sub-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--text-primary);
+      }
+
+      .capabilities-sub-meta {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .capabilities-grid {
+        margin-top: 1.5rem;
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .capabilities-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .cap-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid var(--border-light);
+        background-color: var(--bg-white);
+        padding: 1.5rem;
+        transition: border-color 150ms ease;
+      }
+
+      @media (min-width: 640px) {
+        .cap-card {
+          padding: 1.75rem;
+        }
+      }
+
+      .cap-card:hover {
+        border-color: #9aa5b1;
+      }
+
+      .cap-card-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .cap-card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--text-primary);
+      }
+
+      .cap-card-turnaround {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--accent-copper-text);
+        white-space: nowrap;
+        flex-shrink: 0;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .cap-card-summary {
+        margin-top: 0.75rem;
+        font-size: 0.9375rem;
+        line-height: 1.625;
+        color: var(--text-secondary);
+      }
+
+      .cap-card-specs {
+        margin-top: 1.5rem;
+        border-top: 1px solid var(--border-hairline);
+        padding-top: 0.875rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ==========================================================================
+         6. Sample Project Archetypes Section
+         ========================================================================== */
+      .projects-section {
+        border-bottom: 1px solid #d8dee4;
+        background-color: var(--bg-white);
+      }
+
+      .projects-header-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        .projects-header-row {
+          flex-direction: row;
+          align-items: flex-end;
+        }
+      }
+
+      .projects-count-label {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .filter-tablist {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+        padding-bottom: 1rem;
+      }
+
+      .filter-tab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 40px;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-light);
+        background-color: var(--bg-offwhite);
+        color: #3e4c59;
+        font-size: 0.875rem;
+        font-weight: 500;
+        white-space: nowrap;
+        flex-shrink: 0;
+        transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+      }
+
+      .filter-tab:hover {
+        border-color: #9aa5b1;
+        color: var(--text-primary);
+      }
+
+      .filter-tab[aria-selected="true"] {
+        border-color: var(--bg-gunmetal);
+        background-color: var(--bg-gunmetal);
+        color: var(--text-on-dark);
+      }
+
+      .filter-tab:focus-visible {
+        outline: 2px solid var(--text-primary);
+        outline-offset: 2px;
+      }
+
+      .filter-tab-count {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-variant-numeric: tabular-nums;
+        color: #616e7c;
+      }
+
+      .filter-tab[aria-selected="true"] .filter-tab-count {
+        color: var(--accent-copper-light);
+      }
+
+      .projects-grid {
+        margin-top: 2rem;
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid[data-count="2"] {
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 768px) {
+        .projects-grid[data-count="2"],
+        .projects-grid[data-count="many"] {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .projects-grid[data-count="many"] {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .project-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border-light);
+        background-color: var(--bg-offwhite);
+        transition: border-color 150ms ease;
+      }
+
+      .project-card:hover {
+        border-color: #82909e;
+      }
+
+      @media (min-width: 1024px) {
+        .project-card.is-featured {
+          grid-column: span 2 / span 2;
+          display: grid;
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .projects-grid[data-count="1"] .project-card.is-featured {
+          grid-column: span 1 / span 1;
+        }
+      }
+
+      .project-media {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--bg-slate);
+        aspect-ratio: 4 / 3;
+      }
+
+      @media (min-width: 1024px) {
+        .project-card.is-featured .project-media {
+          grid-column: span 7 / span 7;
+          aspect-ratio: auto;
+          height: 100%;
+        }
+      }
+
+      .project-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .project-body {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--bg-white);
+        padding: 1.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        .project-card.is-featured .project-body {
+          grid-column: span 5 / span 5;
+          padding: 1.75rem;
+        }
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .project-meta-cat {
+        color: var(--accent-copper-text);
+      }
+
+      .project-title {
+        margin-top: 0.625rem;
+        font-size: 1.25rem;
+        line-height: 1.25;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--text-primary);
+        text-wrap: balance;
+      }
+
+      .project-desc {
+        margin-top: 0.625rem;
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--text-secondary);
+      }
+
+      .project-specs-wrap {
+        margin-top: 1.5rem;
+      }
+
+      .project-specs-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border-top: 1px solid var(--border-hairline);
+        padding-top: 1rem;
+        font-size: 0.75rem;
+      }
+
+      .project-spec-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .project-spec-row dt {
+        color: var(--text-muted);
+        flex-shrink: 0;
+      }
+
+      .project-spec-row dd {
+        text-align: right;
+        font-family: var(--font-mono);
+        font-weight: 500;
+        color: var(--text-primary);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .btn-outline-card {
+        margin-top: 1.25rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 42px;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--bg-gunmetal);
+        background-color: var(--bg-white);
+        color: var(--text-primary);
+        font-size: 0.875rem;
+        font-weight: 600;
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .btn-outline-card:hover {
+        background-color: var(--bg-gunmetal);
+        color: var(--text-on-dark);
+      }
+
+      .btn-outline-card:focus-visible {
+        outline: 2px solid var(--accent-copper);
+        outline-offset: 2px;
+      }
+
+      /* ==========================================================================
+         7. 4-Step Process Section
+         ========================================================================== */
+      .process-section {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: var(--bg-slate);
+        color: var(--text-on-dark);
+      }
+
+      .process-header-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        .process-header-row {
+          flex-direction: row;
+          align-items: flex-end;
+        }
+      }
+
+      .process-lead {
+        max-width: 28rem;
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--text-on-dark-muted);
+      }
+
+      .process-grid {
+        margin-top: 3rem;
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .process-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .process-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+      }
+
+      .process-step-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: var(--bg-gunmetal);
+        padding: 1.5rem;
+      }
+
+      .process-step-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1rem;
+      }
+
+      .process-step-num {
+        font-family: var(--font-mono);
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--accent-copper-light);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .process-step-timing {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-on-dark-subtle);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .process-step-title {
+        margin-top: 1.25rem;
+        font-size: 1.125rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--text-on-dark);
+      }
+
+      .process-step-detail {
+        margin-top: 0.625rem;
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--text-on-dark-muted);
+      }
+
+      /* ==========================================================================
+         8. Quote Request Section & Confirmation Summary
+         ========================================================================== */
+      .quote-section {
+        border-bottom: 1px solid #d8dee4;
+        background-color: var(--bg-offwhite);
+      }
+
+      .quote-layout {
+        display: grid;
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      @media (min-width: 1024px) {
+        .quote-layout {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+        .quote-info-col {
+          grid-column: span 5 / span 5;
+        }
+        .quote-form-col {
+          grid-column: span 7 / span 7;
+        }
+      }
+
+      .desk-card {
+        margin-top: 2rem;
+        border: 1px solid var(--border-light);
+        background-color: var(--bg-white);
+        padding: 1.5rem;
+      }
+
+      .desk-card-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .desk-list {
+        margin-top: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 0.875rem;
+      }
+
+      .desk-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .desk-row.has-divider {
+        border-bottom: 1px solid var(--border-hairline);
+        padding-bottom: 1rem;
+      }
+
+      .desk-icon {
+        margin-top: 0.125rem;
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+        color: var(--accent-copper-text);
+      }
+
+      .desk-dt {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .desk-dd {
+        margin-top: 0.125rem;
+        font-size: 0.75rem;
+        line-height: 1.6;
+        color: var(--text-secondary);
+      }
+
+      .form-panel {
+        border: 1px solid var(--border-light);
+        background-color: var(--bg-white);
+        padding: 1.5rem;
+      }
+
+      @media (min-width: 640px) {
+        .form-panel {
+          padding: 2rem;
+        }
+      }
+
+      .quote-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+
+      .form-grid-2 {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      @media (min-width: 640px) {
+        .form-grid-2 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      .field-label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .field-input,
+      .field-select,
+      .field-textarea {
+        margin-top: 0.375rem;
+        display: block;
+        width: 100%;
+        border-radius: var(--radius-sm);
+        border: 1px solid #cbd2d9;
+        background-color: var(--bg-white);
+        padding: 0.625rem 0.875rem;
+        font-size: 0.875rem;
+        color: var(--text-primary);
+      }
+
+      .field-input,
+      .field-select {
+        min-height: 44px;
+      }
+
+      .field-input::placeholder,
+      .field-textarea::placeholder {
+        font-family: var(--font-sans);
+        color: var(--text-placeholder);
+      }
+
+      .field-input:focus,
+      .field-select:focus,
+      .field-textarea:focus {
+        outline: 2px solid var(--text-primary);
+        outline-offset: 0;
+      }
+
+      .field-input.is-invalid,
+      .field-select.is-invalid,
+      .field-textarea.is-invalid {
+        border-color: var(--status-error);
+      }
+
+      .field-error {
+        margin-top: 0.375rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--status-error);
+      }
+
+      .role-fieldset {
+        border: 0;
+        padding: 0;
+      }
+
+      .role-legend {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .role-grid {
+        margin-top: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .role-option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.5rem 0.75rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid #cbd2d9;
+        background-color: var(--bg-offwhite);
+        color: #3e4c59;
+        font-size: 0.875rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+      }
+
+      .role-option:hover {
+        border-color: #9aa5b1;
+        color: var(--text-primary);
+      }
+
+      .role-option.is-checked {
+        border-color: var(--bg-gunmetal);
+        background-color: var(--bg-gunmetal);
+        color: var(--text-on-dark);
+      }
+
+      .role-option:focus-within {
+        outline: 2px solid var(--text-primary);
+        outline-offset: 2px;
+      }
+
+      .form-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        border-top: 1px solid var(--border-hairline);
+        padding-top: 1.25rem;
+      }
+
+      @media (min-width: 640px) {
+        .form-footer {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      .form-footer-note {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .btn-submit {
+        min-height: 46px;
+        padding: 0.75rem 1.5rem;
+      }
+
+      .btn-submit:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+
+      .btn-submit:focus-visible {
+        outline: 2px solid var(--text-primary);
+        outline-offset: 2px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner {
+        animation: spin 0.9s linear infinite;
+      }
+
+      /* Confirmation Card */
+      .confirmation-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .confirmation-head {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border-hairline);
+        padding-bottom: 1.25rem;
+      }
+
+      .confirmation-icon {
+        margin-top: 0.125rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        flex-shrink: 0;
+        color: var(--status-success);
+      }
+
+      .confirmation-ref {
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--status-success);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .confirmation-title {
+        margin-top: 0.25rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .confirmation-sub {
+        margin-top: 0.375rem;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+      }
+
+      .confirmation-dl {
+        display: grid;
+        gap: 1rem;
+        border: 1px solid var(--border-subtle);
+        background-color: var(--bg-offwhite);
+        padding: 1.25rem;
+        font-size: 0.875rem;
+      }
+
+      @media (min-width: 640px) {
+        .confirmation-dl {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .confirmation-span-2 {
+          grid-column: span 2 / span 2;
+        }
+      }
+
+      .confirmation-dt {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .confirmation-dd {
+        margin-top: 0.25rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .confirmation-dd-brief {
+        margin-top: 0.25rem;
+        line-height: 1.6;
+        color: #3e4c59;
+      }
+
+      .confirmation-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-top: 0.25rem;
+      }
+
+      .confirmation-note {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+      }
+
+      .btn-outline-reset {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0.5rem 1.25rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--bg-gunmetal);
+        background-color: var(--bg-white);
+        color: var(--text-primary);
+        font-size: 0.875rem;
+        font-weight: 600;
+        transition: background-color 150ms ease, color 150ms ease;
+      }
+
+      .btn-outline-reset:hover {
+        background-color: var(--bg-gunmetal);
+        color: var(--text-on-dark);
+      }
+
+      .btn-outline-reset:focus-visible {
+        outline: 2px solid var(--accent-copper);
+        outline-offset: 2px;
+      }
+
+      /* ==========================================================================
+         9. Footer
+         ========================================================================== */
+      .site-footer {
+        background-color: var(--bg-gunmetal);
+        color: var(--text-on-dark-muted);
+      }
+
+      .footer-inner {
+        padding-block: 3rem;
+      }
+
+      @media (min-width: 1024px) {
+        .footer-inner {
+          padding-block: 4rem;
+        }
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 2.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .footer-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .footer-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+        .footer-brand-col {
+          grid-column: span 2 / span 2;
+        }
+      }
+
+      .footer-brand-name {
+        font-family: var(--font-display);
+        font-size: 1.125rem;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--text-on-dark);
+      }
+
+      .footer-brand-desc {
+        margin-top: 0.75rem;
+        max-width: 28rem;
+        font-size: 0.875rem;
+        line-height: 1.625;
+        color: var(--text-on-dark-subtle);
+      }
+
+      .footer-brand-coverage {
+        margin-top: 1rem;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        color: var(--accent-copper-light);
+        font-variant-numeric: tabular-nums;
+      }
+
+      .footer-col-title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--text-on-dark);
+      }
+
+      .footer-link-list {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        font-size: 0.875rem;
+      }
+
+      .footer-link {
+        color: var(--text-on-dark-subtle);
+        transition: color 150ms ease;
+      }
+
+      .footer-link:hover {
+        color: var(--text-on-dark);
+      }
+
+      .footer-meta-list {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+        font-size: 0.875rem;
+        color: var(--text-on-dark-subtle);
+      }
+
+      .footer-bottom {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1.5rem;
+        font-size: 0.75rem;
+        color: var(--text-placeholder);
+      }
+
+      @media (min-width: 640px) {
+        .footer-bottom {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ======================================================================
+         Top Navigation Bar
+         ====================================================================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="brand-link">Bismillah Steel Fabrication</a>
+
+        <nav aria-label="Primary navigation" class="desktop-nav">
+          <a href="#capabilities" class="nav-link">Capabilities</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#process" class="nav-link">Process</a>
+          <a href="#quote" class="nav-link">Request Quote</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            id="header-quote-btn"
+            class="btn-copper header-quote-desktop"
+          >
+            Get a Quote
+          </button>
+
+          <button
+            type="button"
+            id="mobile-menu-toggle"
+            class="mobile-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-navigation-drawer"
+            aria-label="Open navigation menu"
+          >
+            <svg
+              id="icon-menu"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <svg
+              id="icon-close"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              hidden
+            >
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-navigation-drawer" class="mobile-drawer" hidden>
+        <nav aria-label="Mobile navigation" class="mobile-nav-list">
+          <a href="#capabilities" class="mobile-nav-link">Capabilities</a>
+          <a href="#projects" class="mobile-nav-link">Projects</a>
+          <a href="#process" class="mobile-nav-link">Process</a>
+          <a href="#quote" class="mobile-nav-link">Request Quote</a>
+          <div class="mobile-drawer-cta">
+            <button type="button" id="mobile-quote-btn" class="btn-copper">
+              Get a Quote
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ====================================================================
+           Hero Section
+           ==================================================================== -->
+      <section id="top" class="hero-section">
+        <div class="container hero-container">
+          <div class="hero-split">
+            <div class="hero-copy-col">
+              <div>
+                <p class="hero-kicker">24-Hour Steel Fabrication · Across Pakistan</p>
+
+                <h1 class="hero-title">
+                  Architectural and structural steelwork built to drawing and site schedule.
+                </h1>
+
+                <p class="hero-description">
+                  Serving architects, builders, and homeowners across Pakistan with precision gates, cantilevered stairs, commercial facades, and structural steel—backed by round-the-clock workshop shifts.
+                </p>
+
+                <div class="hero-cta-row">
+                  <button
+                    type="button"
+                    id="hero-quote-btn"
+                    class="btn-copper btn-hero-primary"
+                  >
+                    <span>Request Custom Quote</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </button>
+
+                  <a href="#capabilities" class="btn-hero-secondary">
+                    View Fabrication Scope
+                  </a>
+                </div>
+              </div>
+
+              <div class="hero-footnote">
+                <p>
+                  Direct shop-floor fabrication for residential plots, commercial plazas, and industrial spans · CAD/DXF review and site measurement available 24 hours.
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-media-col">
+              <div class="hero-media-frame">
+                <img
+                  src="./src/assets/images/hero_steel_workshop_1795333665989.jpg"
+                  alt="Precision structural I-beams and CNC laser-cut architectural steel louvers inside Bismillah Steel Fabrication workshop"
+                  referrerpolicy="no-referrer"
+                  onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+                />
+                <div class="svg-fallback" hidden>
+                  <svg viewBox="0 0 320 180" fill="none" aria-hidden="true">
+                    <rect x="16" y="24" width="288" height="132" stroke="#3E4C59" stroke-width="1.5" />
+                    <path d="M40 120 H280 M40 126 H280 M55 60 V120 M115 60 V120 M175 60 V120 M235 60 V120" stroke="#9AA5B1" stroke-width="1.5" />
+                    <path d="M36 60 H284 L264 38 H56 Z" stroke="#E38849" stroke-width="2" />
+                    <line x1="56" y1="38" x2="115" y2="60" stroke="#E38849" stroke-width="1.2" />
+                    <line x1="115" y1="60" x2="175" y2="38" stroke="#E38849" stroke-width="1.2" />
+                    <line x1="175" y1="38" x2="235" y2="60" stroke="#E38849" stroke-width="1.2" />
+                  </svg>
+                  <p class="svg-fallback-title">Bismillah Steel Fabrication Workshop Bay</p>
+                  <p class="svg-fallback-sub">CNC Laser Cutting · Structural Welding · Powder Coating</p>
+                </div>
+
+                <div class="hero-scrim" aria-hidden="true"></div>
+
+                <div class="hero-media-caption">
+                  <div class="hero-media-caption-inner">
+                    <span class="hero-media-caption-title">Workshop Floor &amp; Heavy Assembly Bay</span>
+                    <span class="hero-media-caption-shift">Open 24 Hours · Day &amp; Night Shifts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="spec-strip" aria-label="Fabrication specification highlights">
+            <div class="spec-cell">
+              <div class="spec-label">Operating Schedule</div>
+              <div class="spec-value">24 Hours · 3 Fabrication Shifts</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-label">Material Grades</div>
+              <div class="spec-value">MS A36 · SS 304/316 · Corten</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-label">Cut &amp; Fold Tolerance</div>
+              <div class="spec-value">±0.5 mm CNC Laser &amp; Brake</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-label">Service Coverage</div>
+              <div class="spec-value">Lahore · Islamabad · Karachi</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Audience & Core Fabrication Capabilities Section
+           ==================================================================== -->
+      <section id="capabilities" class="capabilities-section section-pad">
+        <div class="container">
+          <div style="max-width: 48rem;">
+            <p class="section-kicker-light">Who We Serve &amp; Fabrication Scope</p>
+            <h2 class="section-heading">
+              Built for architectural detail, contractor timelines, and residential longevity.
+            </h2>
+            <p class="section-lead">
+              Select your role below to review how our 24-hour workshop integrates with drawings, site schedules, and residential measurements.
+            </p>
+          </div>
+
+          <div class="audience-box">
+            <div
+              role="tablist"
+              aria-label="Client discipline selector"
+              class="audience-tablist"
+            >
+              <button
+                type="button"
+                role="tab"
+                id="audience-tab-architects"
+                class="audience-tab"
+                aria-selected="true"
+                aria-controls="audience-tabpanel"
+                data-audience="architects"
+              >
+                <span>Architects &amp; Designers</span>
+                <span class="audience-tab-num">01</span>
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="audience-tab-builders"
+                class="audience-tab"
+                aria-selected="false"
+                aria-controls="audience-tabpanel"
+                data-audience="builders"
+              >
+                <span>Builders &amp; Contractors</span>
+                <span class="audience-tab-num">02</span>
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="audience-tab-homeowners"
+                class="audience-tab"
+                aria-selected="false"
+                aria-controls="audience-tabpanel"
+                data-audience="homeowners"
+              >
+                <span>Homeowners</span>
+                <span class="audience-tab-num">03</span>
+              </button>
+            </div>
+
+            <div
+              role="tabpanel"
+              id="audience-tabpanel"
+              aria-labelledby="audience-tab-architects"
+              class="audience-panel"
+            >
+              <div class="audience-panel-main">
+                <h3 id="audience-headline" class="audience-panel-heading">
+                  Shop drawings executed faithfully to your elevation intent
+                </h3>
+                <p id="audience-summary" class="audience-panel-summary">
+                  We translate CAD and BIM detail sheets into flush-welded architectural steel with concealed fasteners, consistent shadow gaps, and verified powder-coat or raw patina finishes.
+                </p>
+
+                <div class="audience-actions">
+                  <button
+                    type="button"
+                    id="audience-quote-btn"
+                    class="btn-dark"
+                    data-role="Architect"
+                  >
+                    <span id="audience-quote-label">Request Quote as Architect</span>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </button>
+                  <span id="audience-coord" class="audience-coord-note">
+                    24-hour technical desk for CAD revisions &amp; sample dispatches
+                  </span>
+                </div>
+              </div>
+
+              <div class="audience-panel-deliverables">
+                <div class="deliverables-label">Standard Deliverables</div>
+                <ul id="audience-deliverables" class="deliverables-list"></ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="capabilities-sub">
+            <div class="capabilities-sub-head">
+              <h3 class="capabilities-sub-title">Core Fabrication Capabilities</h3>
+              <p class="capabilities-sub-meta">04 Workshop Disciplines · 24-Hour Continuous Operation</p>
+            </div>
+
+            <div class="capabilities-grid">
+              <article class="cap-card">
+                <div>
+                  <div class="cap-card-head">
+                    <h4 class="cap-card-title">01. Architectural Metalwork</h4>
+                    <span class="cap-card-turnaround">7–12 Days Typical</span>
+                  </div>
+                  <p class="cap-card-summary">
+                    CNC fiber-laser screens, ventilated facade louvers, folded sheet trims, and custom door frames built to tight architectural reveals.
+                  </p>
+                </div>
+                <div class="cap-card-specs">
+                  2 mm–12 mm MS/SS Sheet · ±0.5 mm CNC Tolerance
+                </div>
+              </article>
+
+              <article class="cap-card">
+                <div>
+                  <div class="cap-card-head">
+                    <h4 class="cap-card-title">02. Gates, Railings &amp; Stairs</h4>
+                    <span class="cap-card-turnaround">10–18 Days Typical</span>
+                  </div>
+                  <p class="cap-card-summary">
+                    Motorized sliding and pivot villa gates, folded-plate cantilevered staircases, and tension-rod or glass-shoe balustrades.
+                  </p>
+                </div>
+                <div class="cap-card-specs">
+                  14–16 SWG Tube &amp; 10 mm Stringer Plate
+                </div>
+              </article>
+
+              <article class="cap-card">
+                <div>
+                  <div class="cap-card-head">
+                    <h4 class="cap-card-title">03. Structural &amp; Custom Steel</h4>
+                    <span class="cap-card-turnaround">Schedule-Aligned 24/7</span>
+                  </div>
+                  <p class="cap-card-summary">
+                    Long-span roof trusses, mezzanine framing, entrance canopies, and bolted portal structures fabricated to structural engineer specs.
+                  </p>
+                </div>
+                <div class="cap-card-specs">
+                  HEB / IPE / Box Sections · MIG &amp; Arc Certified
+                </div>
+              </article>
+
+              <article class="cap-card">
+                <div>
+                  <div class="cap-card-head">
+                    <h4 class="cap-card-title">04. Finishing &amp; Installation</h4>
+                    <span class="cap-card-turnaround">Day &amp; Night Site Crews</span>
+                  </div>
+                  <p class="cap-card-summary">
+                    Sandblasting, hot-dip galvanizing, two-pack epoxy priming, oven-baked powder coating, and anchored site erection across Pakistan.
+                  </p>
+                </div>
+                <div class="cap-card-specs">
+                  RAL Matte Charcoal · Brushed SS · Zinc Primer
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Featured Project Archetypes Section
+           ==================================================================== -->
+      <section id="projects" class="projects-section section-pad">
+        <div class="container">
+          <div class="projects-header-row">
+            <div style="max-width: 42rem;">
+              <p class="section-kicker-light">Sample Fabrication Archetypes</p>
+              <h2 class="section-heading">
+                Representative metalwork scopes across residential and commercial builds.
+              </h2>
+            </div>
+
+            <p id="projects-count" class="projects-count-label" aria-live="polite">
+              Showing 5 of 5 fabrication archetypes
+            </p>
+          </div>
+
+          <div
+            role="tablist"
+            aria-label="Filter project archetypes by category"
+            class="filter-tablist"
+          >
+            <button
+              type="button"
+              role="tab"
+              class="filter-tab"
+              aria-selected="true"
+              data-category="all"
+            >
+              <span>All Work</span>
+              <span class="filter-tab-count">5</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-tab"
+              aria-selected="false"
+              data-category="gates-louvers"
+            >
+              <span>Gates &amp; Louvers</span>
+              <span class="filter-tab-count">2</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-tab"
+              aria-selected="false"
+              data-category="stairs-railings"
+            >
+              <span>Stairs &amp; Railings</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-tab"
+              aria-selected="false"
+              data-category="commercial-facades"
+            >
+              <span>Commercial Facades</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="filter-tab"
+              aria-selected="false"
+              data-category="structural-steel"
+            >
+              <span>Structural Steel</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+          </div>
+
+          <div id="projects-grid" class="projects-grid" data-count="many"></div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           4-Step Process Section
+           ==================================================================== -->
+      <section id="process" class="process-section section-pad">
+        <div class="container">
+          <div class="process-header-row">
+            <div style="max-width: 42rem;">
+              <p class="section-kicker-dark">How We Work · 4-Step Fabrication Workflow</p>
+              <h2 class="section-heading" style="color: #ffffff;">
+                From CAD sheet or site measurement to anchored installation.
+              </h2>
+            </div>
+
+            <p class="process-lead">
+              Our estimation desk and shop floor operate across three shifts, 24 hours a day, to keep urgent commercial pours and residential handovers on track.
+            </p>
+          </div>
+
+          <ol class="process-grid">
+            <li class="process-step-card">
+              <div>
+                <div class="process-step-head">
+                  <span class="process-step-num">01</span>
+                  <span class="process-step-timing">24-Hour Response Desk</span>
+                </div>
+                <h3 class="process-step-title">Consultation &amp; Drawings</h3>
+                <p class="process-step-detail">
+                  Share architectural CAD drawings, a BOQ, or rough site dimensions. Our estimation desk responds at any hour to confirm feasibility and schedule a site survey.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step-card">
+              <div>
+                <div class="process-step-head">
+                  <span class="process-step-num">02</span>
+                  <span class="process-step-timing">Physical Finish Swatches</span>
+                </div>
+                <h3 class="process-step-title">Material &amp; Finish Selection</h3>
+                <p class="process-step-detail">
+                  We specify steel gauge, tube profile, weld grade, and corrosion protection—matching coastal humidity in Karachi or thermal swings in Punjab and Islamabad.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step-card">
+              <div>
+                <div class="process-step-head">
+                  <span class="process-step-num">03</span>
+                  <span class="process-step-timing">3-Shift Shop Floor</span>
+                </div>
+                <h3 class="process-step-title">Precision Fabrication</h3>
+                <p class="process-step-detail">
+                  Continuous 24-hour workshop shifts handle CNC laser cutting, press-brake bending, jig-aligned welding, grinding, and oven-cured powder coating.
+                </p>
+              </div>
+            </li>
+
+            <li class="process-step-card">
+              <div>
+                <div class="process-step-head">
+                  <span class="process-step-num">04</span>
+                  <span class="process-step-timing">Nationwide Site Dispatch</span>
+                </div>
+                <h3 class="process-step-title">Delivery &amp; Installation</h3>
+                <p class="process-step-detail">
+                  Flatbed dispatch across Pakistan with our own anchoring and erection technicians, including overnight installation windows for active commercial sites.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           Quote & Consultation Request Section
+           ==================================================================== -->
+      <section id="quote" class="quote-section section-pad">
+        <div class="container">
+          <div class="quote-layout">
+            <div class="quote-info-col">
+              <p class="section-kicker-light">Quote &amp; Consultation Desk</p>
+              <h2 class="section-heading">
+                Request a fabrication estimate or site measurement.
+              </h2>
+              <p class="section-lead">
+                Submit your project scope below. Our 24-hour estimation desk reviews BOQs, elevation drawings, and residential plot sizes to issue structured rate and turnaround feedback.
+              </p>
+
+              <div class="desk-card">
+                <h3 class="desk-card-title">24-Hour Dispatch &amp; Workshop Desk</h3>
+
+                <dl class="desk-list">
+                  <div class="desk-row has-divider">
+                    <svg
+                      class="desk-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <div>
+                      <dt class="desk-dt">Operating Hours</dt>
+                      <dd class="desk-dd mono-tabular">
+                        Open 24 Hours · 7 Days a Week (3 Workshop Shifts)
+                      </dd>
+                    </div>
+                  </div>
+
+                  <div class="desk-row has-divider">
+                    <svg
+                      class="desk-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <div>
+                      <dt class="desk-dt">Phone &amp; WhatsApp Estimation Line</dt>
+                      <dd class="desk-dd mono-tabular">
+                        +92 300 000 2470 · Demo Inquiry Desk
+                      </dd>
+                    </div>
+                  </div>
+
+                  <div class="desk-row">
+                    <svg
+                      class="desk-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <div>
+                      <dt class="desk-dt">Fabrication &amp; Erection Corridor</dt>
+                      <dd class="desk-dd">
+                        Lahore · Islamabad / Rawalpindi · Karachi · Faisalabad · Multan · Nationwide Freight &amp; Site Teams
+                      </dd>
+                    </div>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="quote-form-col">
+              <div class="form-panel">
+                <form id="quote-form" class="quote-form" novalidate>
+                  <div class="form-grid-2">
+                    <div>
+                      <label for="quote-name" class="field-label">
+                        Full Name or Firm Name
+                      </label>
+                      <input
+                        id="quote-name"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        placeholder="e.g. Tariq Mehmood / Studio Line"
+                        class="field-input"
+                        aria-invalid="false"
+                      />
+                      <p id="quote-name-error" role="alert" class="field-error" hidden></p>
+                    </div>
+
+                    <div>
+                      <label for="quote-phone" class="field-label">
+                        Phone or WhatsApp Number
+                      </label>
+                      <input
+                        id="quote-phone"
+                        name="phone"
+                        type="tel"
+                        autocomplete="tel"
+                        placeholder="e.g. +92 300 1234567"
+                        class="field-input mono-tabular"
+                        aria-invalid="false"
+                      />
+                      <p id="quote-phone-error" role="alert" class="field-error" hidden></p>
+                    </div>
+                  </div>
+
+                  <fieldset class="role-fieldset">
+                    <legend class="role-legend">Your Role</legend>
+                    <div class="role-grid">
+                      <label class="role-option">
+                        <input
+                          id="quote-role-architect"
+                          type="radio"
+                          name="role"
+                          value="Architect"
+                          class="sr-only"
+                        />
+                        <span>Architect</span>
+                      </label>
+                      <label class="role-option">
+                        <input
+                          id="quote-role-builder"
+                          type="radio"
+                          name="role"
+                          value="Builder"
+                          class="sr-only"
+                        />
+                        <span>Builder</span>
+                      </label>
+                      <label class="role-option">
+                        <input
+                          id="quote-role-homeowner"
+                          type="radio"
+                          name="role"
+                          value="Homeowner"
+                          class="sr-only"
+                        />
+                        <span>Homeowner</span>
+                      </label>
+                    </div>
+                    <p id="quote-role-error" role="alert" class="field-error" hidden></p>
+                  </fieldset>
+
+                  <div class="form-grid-2">
+                    <div>
+                      <label for="quote-project-type" class="field-label">
+                        Project Type
+                      </label>
+                      <select
+                        id="quote-project-type"
+                        name="projectType"
+                        class="field-select"
+                        aria-invalid="false"
+                      >
+                        <option value="">Select scope category</option>
+                        <option value="Gates, Boundary Walls &amp; Louvers">
+                          Gates, Boundary Walls &amp; Louvers
+                        </option>
+                        <option value="Staircases, Railings &amp; Balustrades">
+                          Staircases, Railings &amp; Balustrades
+                        </option>
+                        <option value="Commercial Facade &amp; Canopy">
+                          Commercial Facade &amp; Canopy
+                        </option>
+                        <option value="Structural Steel &amp; Trusses">
+                          Structural Steel &amp; Trusses
+                        </option>
+                        <option value="Pergolas, Screens &amp; Architectural Metalwork">
+                          Pergolas, Screens &amp; Architectural Metalwork
+                        </option>
+                        <option value="Custom Fabrication / Multi-Scope BOQ">
+                          Custom Fabrication / Multi-Scope BOQ
+                        </option>
+                      </select>
+                      <p
+                        id="quote-project-type-error"
+                        role="alert"
+                        class="field-error"
+                        hidden
+                      ></p>
+                    </div>
+
+                    <div>
+                      <label for="quote-city" class="field-label">
+                        Location / City in Pakistan
+                      </label>
+                      <select
+                        id="quote-city"
+                        name="city"
+                        class="field-select"
+                        aria-invalid="false"
+                      >
+                        <option value="">Select city</option>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Islamabad">Islamabad</option>
+                        <option value="Rawalpindi">Rawalpindi</option>
+                        <option value="Karachi">Karachi</option>
+                        <option value="Faisalabad">Faisalabad</option>
+                        <option value="Multan">Multan</option>
+                        <option value="Sialkot">Sialkot</option>
+                        <option value="Gujranwala">Gujranwala</option>
+                        <option value="Peshawar">Peshawar</option>
+                        <option value="Other City in Pakistan">
+                          Other City in Pakistan
+                        </option>
+                      </select>
+                      <p id="quote-city-error" role="alert" class="field-error" hidden></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="quote-details" class="field-label">
+                      Brief Project Details
+                    </label>
+                    <textarea
+                      id="quote-details"
+                      name="details"
+                      rows="4"
+                      placeholder="Include approximate width/height, number of openings, preferred finish, or target site installation date."
+                      class="field-textarea"
+                      aria-invalid="false"
+                    ></textarea>
+                    <p id="quote-details-error" role="alert" class="field-error" hidden></p>
+                  </div>
+
+                  <div class="form-footer">
+                    <p class="form-footer-note">
+                      24-Hour Estimation Desk · CAD &amp; Site Visits
+                    </p>
+
+                    <button
+                      type="submit"
+                      id="quote-submit-btn"
+                      class="btn-copper btn-submit"
+                    >
+                      <svg
+                        id="quote-submit-spinner"
+                        class="spinner"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                        hidden
+                      >
+                        <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
+                      </svg>
+                      <span id="quote-submit-label">Submit Quote Request</span>
+                    </button>
+                  </div>
+                </form>
+
+                <div
+                  id="quote-confirmation"
+                  data-testid="quote-confirmation"
+                  class="confirmation-wrap"
+                  aria-live="polite"
+                  hidden
+                >
+                  <div class="confirmation-head">
+                    <svg
+                      class="confirmation-icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="m9 12 2 2 4-4"></path>
+                    </svg>
+                    <div>
+                      <p id="conf-ref-line" class="confirmation-ref"></p>
+                      <h3 class="confirmation-title">Quote Request Received</h3>
+                      <p class="confirmation-sub">
+                        Demo inquiry logged for our 24-hour estimation team. An engineer will follow up via phone or WhatsApp to confirm drawings or site timing.
+                      </p>
+                    </div>
+                  </div>
+
+                  <dl class="confirmation-dl">
+                    <div>
+                      <dt class="confirmation-dt">Contact Name</dt>
+                      <dd id="conf-name" class="confirmation-dd"></dd>
+                    </div>
+                    <div>
+                      <dt class="confirmation-dt">Phone / WhatsApp</dt>
+                      <dd id="conf-phone" class="confirmation-dd mono-tabular"></dd>
+                    </div>
+                    <div>
+                      <dt class="confirmation-dt">Client Role</dt>
+                      <dd id="conf-role" class="confirmation-dd"></dd>
+                    </div>
+                    <div>
+                      <dt class="confirmation-dt">City / Location</dt>
+                      <dd id="conf-city" class="confirmation-dd"></dd>
+                    </div>
+                    <div class="confirmation-span-2">
+                      <dt class="confirmation-dt">Project Scope</dt>
+                      <dd id="conf-project-type" class="confirmation-dd"></dd>
+                    </div>
+                    <div class="confirmation-span-2">
+                      <dt class="confirmation-dt">Submitted Brief</dt>
+                      <dd id="conf-details" class="confirmation-dd-brief"></dd>
+                    </div>
+                  </dl>
+
+                  <div class="confirmation-actions">
+                    <p class="confirmation-note">
+                      Note: This interactive demo validates and generates a confirmation summary locally.
+                    </p>
+                    <button
+                      type="button"
+                      id="quote-reset-btn"
+                      class="btn-outline-reset"
+                    >
+                      Submit Another Inquiry
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================================================
+         Footer
+         ====================================================================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand-col">
+            <p class="footer-brand-name">Bismillah Steel Fabrication</p>
+            <p class="footer-brand-desc">
+              Custom architectural and structural steelwork serving architects, commercial builders, and residential homeowners across Pakistan with continuous 24-hour workshop operations.
+            </p>
+            <p class="footer-brand-coverage">
+              Operating 24 Hours · Lahore · Islamabad · Karachi · Nationwide
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer-col-title">Sections</h3>
+            <ul class="footer-link-list">
+              <li><a href="#capabilities" class="footer-link">Who We Serve &amp; Scope</a></li>
+              <li><a href="#projects" class="footer-link">Sample Project Archetypes</a></li>
+              <li><a href="#process" class="footer-link">4-Step Process</a></li>
+              <li><a href="#quote" class="footer-link">Request Custom Quote</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-col-title">24-Hour Desk (Demo)</h3>
+            <ul class="footer-meta-list">
+              <li class="mono-tabular">Phone / WhatsApp: +92 300 000 2470</li>
+              <li>Estimation: 24/7 Shift Coverage</li>
+              <li>Workshop: Industrial Area, Lahore</li>
+              <li>Site Dispatch: All Major Cities</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="footer-year">2026</span> Bismillah Steel Fabrication. Demonstration website.</p>
+          <p class="mono-tabular">Custom Steel Fabrication · Pakistan</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ======================================================================
+         Vanilla JavaScript Application Logic
+         ====================================================================== -->
+    <script>
+      (function () {
+        'use strict';
+
+        /* ------------------------------------------------------------------
+           Data Definitions
+           ------------------------------------------------------------------ */
+        var AUDIENCE_PROFILES = {
+          architects: {
+            role: 'Architect',
+            headline: 'Shop drawings executed faithfully to your elevation intent',
+            summary:
+              'We translate CAD and BIM detail sheets into flush-welded architectural steel with concealed fasteners, consistent shadow gaps, and verified powder-coat or raw patina finishes.',
+            deliverables: [
+              'CAD/DXF shop drawing review and weld-joint mockups before cutting',
+              'Concealed hinge, motor-track, and structural embed coordination',
+              'Custom CNC laser-cut jali patterns, louvers, and cantilevered stair stringers',
+            ],
+            coordinationNote: '24-hour technical desk for CAD revisions & sample dispatches',
+          },
+          builders: {
+            role: 'Builder',
+            headline: 'Site-ready structural steel delivered on tight concrete & MEP schedules',
+            summary:
+              'Round-the-clock workshop shifts prevent critical-path delays on commercial plazas, warehouses, and multi-unit residential builds—with night-window erection available.',
+            deliverables: [
+              'Pre-drilled gusset plates, I-beam portal frames, and mezzanine decking',
+              'Batch-numbered trusses and stair flights staged for rapid crane erection',
+              'Overnight fabrication and off-peak site delivery to avoid urban traffic bans',
+            ],
+            coordinationNote: 'Direct BOQ takeoffs and night-shift erection crew scheduling',
+          },
+          homeowners: {
+            role: 'Homeowner',
+            headline: 'Durable gates, railings, and courtyard structures measured on-site',
+            summary:
+              'From initial site measurement to rust-protected primer and final site installation, we build custom residential metalwork tailored to your plot dimensions and privacy needs.',
+            deliverables: [
+              'On-site laser measurement for boundary gates, grills, and terrace pergolas',
+              'Epoxy zinc primer and UV-stable electrostatic powder coating against monsoon rust',
+              'Clean installation with motorization prep for sliding and swing driveway gates',
+            ],
+            coordinationNote: '24-hour site visit booking and transparent per-square-foot estimates',
+          },
+        };
+
+        var PROJECT_ARCHETYPES = [
+          {
+            id: 'villa-louver-gate',
+            title: 'Modern Villa Sliding Gate & Vertical Louvers',
+            category: 'gates-louvers',
+            categoryLabel: 'Gates & Louvers',
+            projectTypeValue: 'Gates, Boundary Walls & Louvers',
+            cityContext: 'Islamabad & Lahore Residential',
+            turnaround: '12-Day Fabrication',
+            materialSpec: '14 SWG MS Box Louvers · Heavy Channel Track',
+            finishSpec: 'Zinc-Rich Epoxy + Matte Charcoal Powder Coat',
+            description:
+              'Flush-welded driveway sliding gate with angled privacy louvers, concealed floor guide track, and integrated pedestrian wicket leaf engineered for automated rack-and-pinion motors.',
+            imageSrc: './src/assets/images/archetype_villa_gate_1795333665300.jpg',
+            imageAlt:
+              'Custom matte charcoal vertical louver steel sliding gate at a contemporary concrete residence',
+            svgMarkup:
+              '<svg viewBox="0 0 280 160" fill="none" aria-hidden="true"><rect x="20" y="32" width="240" height="96" stroke="#9AA5B1" stroke-width="1.5"/><path d="M36 32V128M52 32V128M68 32V128M84 32V128M100 32V128M116 32V128M132 32V128M148 32V128M164 32V128M180 32V128M196 32V128M212 32V128M228 32V128M244 32V128" stroke="#E38849" stroke-width="2"/><line x1="12" y1="132" x2="268" y2="132" stroke="#CBD2D9" stroke-width="2"/></svg>',
+          },
+          {
+            id: 'cantilever-staircase',
+            title: 'Cantilevered Steel Plate Staircase & Rod Balustrade',
+            category: 'stairs-railings',
+            categoryLabel: 'Stairs & Railings',
+            projectTypeValue: 'Staircases, Railings & Balustrades',
+            cityContext: 'Double-Height Residence',
+            turnaround: '16-Day Fabrication',
+            materialSpec: '12 mm Folded MS Stringer · 16 mm Solid Vertical Rods',
+            finishSpec: 'Bead-Blasted Gunmetal & Satin Clear Sealer',
+            description:
+              'Wall-anchored structural steel stair carriage fabricated in modular segments for clean interior assembly, paired with pre-drilled tread plates for solid timber and floor-to-ceiling tension rods.',
+            imageSrc: './src/assets/images/archetype_cantilever_stair_1795333666963.jpg',
+            imageAlt:
+              'Custom folded matte gunmetal steel staircase with timber treads and vertical tension balustrade rods',
+            svgMarkup:
+              '<svg viewBox="0 0 280 160" fill="none" aria-hidden="true"><path d="M36 128 H80 V104 H124 V80 H168 V56 H212 V32 H244" stroke="#E38849" stroke-width="2.5"/><path d="M58 128 V32 M102 104 V32 M146 80 V32 M190 56 V32 M230 32 V128" stroke="#9AA5B1" stroke-width="1.2"/></svg>',
+          },
+          {
+            id: 'commercial-facade-canopy',
+            title: 'Commercial Steel Canopy & Perforated Brise-Soleil',
+            category: 'commercial-facades',
+            categoryLabel: 'Commercial Facades',
+            projectTypeValue: 'Commercial Facade & Canopy',
+            cityContext: 'Karachi & Lahore Commercial',
+            turnaround: '21-Day Turnkey Scope',
+            materialSpec: 'IPE 240 Outriggers · 3 mm CNC Perforated Panels',
+            finishSpec: 'Marine-Grade Zinc Primer + Copper-Bronze PVDF',
+            description:
+              'Cantilevered structural entrance canopy and modular sun-shading facade screen engineered to cut western solar gain while preserving daylight across curtain-wall glazing.',
+            imageSrc: './src/assets/images/archetype_commercial_facade_1795333667577.jpg',
+            imageAlt:
+              'Modern commercial building featuring a dark steel entrance canopy and perforated bronze-slate facade screen',
+            svgMarkup:
+              '<svg viewBox="0 0 280 160" fill="none" aria-hidden="true"><rect x="44" y="20" width="192" height="72" stroke="#E38849" stroke-width="1.5"/><path d="M24 98 H256 L236 112 H44 Z" stroke="#CBD2D9" stroke-width="2"/><path d="M76 20V92M108 20V92M140 20V92M172 20V92M204 20V92" stroke="#9AA5B1" stroke-width="1.2"/></svg>',
+          },
+          {
+            id: 'portal-frame-truss',
+            title: 'Long-Span Bolted Portal Frame & Roof Truss System',
+            category: 'structural-steel',
+            categoryLabel: 'Structural Steel',
+            projectTypeValue: 'Structural Steel & Trusses',
+            cityContext: 'Industrial & Showroom Builds',
+            turnaround: '24/7 Shift Production',
+            materialSpec: 'Custom Built-Up I-Sections · 16 mm Gusset Plates',
+            finishSpec: 'Red-Oxide / Grey Alkyd Structural Primer',
+            description:
+              'Shop-fabricated wide-span trusses and bolted splice connections built under strict dimensional jigs so site erection crews bolt sections cleanly with minimal field welding.',
+            imageSrc: './src/assets/images/archetype_structural_truss_1795333667594.jpg',
+            imageAlt:
+              'Exposed long-span dark steel portal frame and bolted truss connections inside a showroom build',
+            svgMarkup:
+              '<svg viewBox="0 0 280 160" fill="none" aria-hidden="true"><path d="M24 134 V56 L140 28 L256 56 V134" stroke="#E38849" stroke-width="2"/><path d="M24 68 H256 M56 68 L98 40 L140 68 L182 40 L224 68" stroke="#9AA5B1" stroke-width="1.5"/></svg>',
+          },
+          {
+            id: 'courtyard-pergola-screen',
+            title: 'Courtyard Steel Pergola & Laser-Cut Privacy Screen',
+            category: 'gates-louvers',
+            categoryLabel: 'Gates & Louvers',
+            projectTypeValue: 'Pergolas, Screens & Architectural Metalwork',
+            cityContext: 'Residential & Hospitality Terraces',
+            turnaround: '10-Day Fabrication',
+            materialSpec: '150x75 mm RHS Frame · 4 mm CNC Laser Screen',
+            finishSpec: 'Shot-Blasted + Matte Slate Exterior Coat',
+            description:
+              'Clean-mitered outdoor pergola structure combined with custom geometric laser-cut privacy panels, pre-fitted with concealed baseplate anchor covers for stone and concrete terraces.',
+            imageSrc: './src/assets/images/archetype_pergola_screen_1795333666744.jpg',
+            imageAlt:
+              'Matte dark steel courtyard pergola and geometric laser-cut privacy screen casting crisp shadows',
+            svgMarkup:
+              '<svg viewBox="0 0 280 160" fill="none" aria-hidden="true"><path d="M28 40 H252 M48 40 V132 M232 40 V132" stroke="#CBD2D9" stroke-width="2"/><rect x="132" y="46" width="88" height="86" stroke="#E38849" stroke-width="1.5"/><path d="M132 70 L220 110 M160 46 L220 96 M132 104 L188 132" stroke="#E38849" stroke-width="1.2"/></svg>',
+          },
+        ];
+
+        /* ------------------------------------------------------------------
+           Pure Logic Helpers
+           ------------------------------------------------------------------ */
+        function escapeHtml(text) {
+          return String(text)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+        }
+
+        function isValidPakistanPhone(raw) {
+          var trimmed = (raw || '').trim();
+          if (!trimmed) return false;
+          if (/[^0-9+\-\s()]/.test(trimmed)) return false;
+          var digits = trimmed.replace(/\D/g, '');
+          if (digits.length < 10 || digits.length > 15) return false;
+          return digits.indexOf('0') === 0 || digits.indexOf('92') === 0 || digits.length >= 10;
+        }
+
+        function validateQuoteValues(values) {
+          var errors = {};
+          if (!values.name || values.name.trim().length < 2) {
+            errors.name = 'Enter your full name or firm name (minimum 2 characters).';
+          }
+          if (!isValidPakistanPhone(values.phone)) {
+            errors.phone =
+              'Enter a valid phone or WhatsApp number (e.g. +92 300 1234567 or 0300 1234567).';
+          }
+          if (!values.role) {
+            errors.role = 'Select whether you are an Architect, Builder, or Homeowner.';
+          }
+          if (!values.projectType) {
+            errors.projectType = 'Select a fabrication project category.';
+          }
+          if (!values.city) {
+            errors.city = 'Select or specify your project city in Pakistan.';
+          }
+          if (!values.details || values.details.trim().length < 15) {
+            errors.details =
+              'Provide brief dimensions, quantity, or timeline notes (at least 15 characters).';
+          }
+          return errors;
+        }
+
+        function buildReferenceCode(name, phone) {
+          var seed = (name.trim() + phone.trim()).split('').reduce(function (acc, ch) {
+            return (acc * 31 + ch.charCodeAt(0)) % 9000;
+          }, 1000);
+          var suffix = String(Math.abs(seed)).padStart(4, '0');
+          return 'BSF-' + new Date().getFullYear() + '-' + suffix;
+        }
+
+        /* ------------------------------------------------------------------
+           Smooth Navigation & Mobile Drawer
+           ------------------------------------------------------------------ */
+        var mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        var mobileDrawer = document.getElementById('mobile-navigation-drawer');
+        var iconMenu = document.getElementById('icon-menu');
+        var iconClose = document.getElementById('icon-close');
+
+        function setMobileDrawer(open) {
+          mobileDrawer.toggleAttribute('hidden', !open);
+          mobileMenuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          mobileMenuToggle.setAttribute(
+            'aria-label',
+            open ? 'Close navigation menu' : 'Open navigation menu'
+          );
+          iconMenu.toggleAttribute('hidden', open);
+          iconClose.toggleAttribute('hidden', !open);
+        }
+
+        mobileMenuToggle.addEventListener('click', function () {
+          var isOpen = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+          setMobileDrawer(!isOpen);
+        });
+
+        window.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            setMobileDrawer(false);
+          }
+        });
+
+        var mobileLinks = mobileDrawer.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            setMobileDrawer(false);
+          });
+        });
+
+        function scrollToQuote() {
+          var quoteEl = document.getElementById('quote');
+          if (quoteEl) {
+            quoteEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+
+        document.getElementById('header-quote-btn').addEventListener('click', scrollToQuote);
+        document.getElementById('hero-quote-btn').addEventListener('click', scrollToQuote);
+        document.getElementById('mobile-quote-btn').addEventListener('click', function () {
+          setMobileDrawer(false);
+          scrollToQuote();
+        });
+
+        /* ------------------------------------------------------------------
+           Audience Selector Tabs
+           ------------------------------------------------------------------ */
+        var audienceTabs = document.querySelectorAll('.audience-tab');
+        var audiencePanel = document.getElementById('audience-tabpanel');
+        var audienceHeadline = document.getElementById('audience-headline');
+        var audienceSummary = document.getElementById('audience-summary');
+        var audienceDeliverables = document.getElementById('audience-deliverables');
+        var audienceCoord = document.getElementById('audience-coord');
+        var audienceQuoteBtn = document.getElementById('audience-quote-btn');
+        var audienceQuoteLabel = document.getElementById('audience-quote-label');
+
+        var CHECK_ICON_SVG =
+          '<svg class="deliverables-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>';
+
+        function renderAudience(key) {
+          var profile = AUDIENCE_PROFILES[key] || AUDIENCE_PROFILES.architects;
+
+          audienceTabs.forEach(function (tab) {
+            var selected = tab.getAttribute('data-audience') === key;
+            tab.setAttribute('aria-selected', selected ? 'true' : 'false');
+          });
+
+          audiencePanel.setAttribute('aria-labelledby', 'audience-tab-' + key);
+          audienceHeadline.textContent = profile.headline;
+          audienceSummary.textContent = profile.summary;
+          audienceCoord.textContent = profile.coordinationNote;
+          audienceQuoteBtn.setAttribute('data-role', profile.role);
+          audienceQuoteLabel.textContent = 'Request Quote as ' + profile.role;
+
+          audienceDeliverables.innerHTML = profile.deliverables
+            .map(function (item) {
+              return (
+                '<li class="deliverables-item">' +
+                CHECK_ICON_SVG +
+                '<span>' +
+                escapeHtml(item) +
+                '</span></li>'
+              );
+            })
+            .join('');
+        }
+
+        audienceTabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            renderAudience(tab.getAttribute('data-audience'));
+          });
+        });
+
+        renderAudience('architects');
+
+        /* ------------------------------------------------------------------
+           Project Archetype Filtering
+           ------------------------------------------------------------------ */
+        var filterTabs = document.querySelectorAll('.filter-tab');
+        var projectsGrid = document.getElementById('projects-grid');
+        var projectsCount = document.getElementById('projects-count');
+
+        var ARROW_RIGHT_SVG =
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>';
+
+        function renderProjects(category) {
+          var filtered =
+            category === 'all'
+              ? PROJECT_ARCHETYPES
+              : PROJECT_ARCHETYPES.filter(function (p) {
+                  return p.category === category;
+                });
+
+          filterTabs.forEach(function (tab) {
+            var active = tab.getAttribute('data-category') === category;
+            tab.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+
+          projectsCount.textContent =
+            'Showing ' +
+            filtered.length +
+            ' of ' +
+            PROJECT_ARCHETYPES.length +
+            ' fabrication archetypes';
+
+          projectsGrid.setAttribute(
+            'data-count',
+            filtered.length === 1 ? '1' : filtered.length === 2 ? '2' : 'many'
+          );
+
+          projectsGrid.innerHTML = filtered
+            .map(function (project, index) {
+              var isFeatured =
+                filtered.length === 1 || (category === 'all' && index === 0);
+
+              return (
+                '<article data-testid="project-card-' +
+                escapeHtml(project.id) +
+                '" class="project-card' +
+                (isFeatured ? ' is-featured' : '') +
+                '">' +
+                '<div class="project-media">' +
+                '<img src="' +
+                escapeHtml(project.imageSrc) +
+                '" alt="' +
+                escapeHtml(project.imageAlt) +
+                '" referrerpolicy="no-referrer" onerror="this.hidden=true; this.nextElementSibling.hidden=false;" />' +
+                '<div class="svg-fallback" hidden>' +
+                project.svgMarkup +
+                '<p class="svg-fallback-title">' +
+                escapeHtml(project.title) +
+                '</p></div>' +
+                '</div>' +
+                '<div class="project-body">' +
+                '<div>' +
+                '<div class="project-meta">' +
+                '<span class="project-meta-cat">' +
+                escapeHtml(project.categoryLabel) +
+                '</span>' +
+                '<span aria-hidden="true">·</span>' +
+                '<span>' +
+                escapeHtml(project.cityContext) +
+                '</span>' +
+                '<span aria-hidden="true">·</span>' +
+                '<span class="mono-tabular">' +
+                escapeHtml(project.turnaround) +
+                '</span>' +
+                '</div>' +
+                '<h3 class="project-title">' +
+                escapeHtml(project.title) +
+                '</h3>' +
+                '<p class="project-desc">' +
+                escapeHtml(project.description) +
+                '</p>' +
+                '</div>' +
+                '<div class="project-specs-wrap">' +
+                '<dl class="project-specs-list">' +
+                '<div class="project-spec-row"><dt>Section / Gauge</dt><dd>' +
+                escapeHtml(project.materialSpec) +
+                '</dd></div>' +
+                '<div class="project-spec-row"><dt>Protective Finish</dt><dd>' +
+                escapeHtml(project.finishSpec) +
+                '</dd></div>' +
+                '</dl>' +
+                '<button type="button" class="btn-outline-card" data-scope="' +
+                escapeHtml(project.projectTypeValue) +
+                '">' +
+                '<span>Request Similar Scope</span>' +
+                ARROW_RIGHT_SVG +
+                '</button>' +
+                '</div>' +
+                '</div>' +
+                '</article>'
+              );
+            })
+            .join('');
+        }
+
+        filterTabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            renderProjects(tab.getAttribute('data-category'));
+          });
+        });
+
+        projectsGrid.addEventListener('click', function (event) {
+          var btn = event.target.closest('button[data-scope]');
+          if (!btn) return;
+          prefillQuoteForm({ projectType: btn.getAttribute('data-scope') });
+        });
+
+        renderProjects('all');
+
+        /* ------------------------------------------------------------------
+           Quote Request Form, Validation, Prefill & Confirmation
+           ------------------------------------------------------------------ */
+        var quoteForm = document.getElementById('quote-form');
+        var quoteConfirmation = document.getElementById('quote-confirmation');
+        var inputName = document.getElementById('quote-name');
+        var inputPhone = document.getElementById('quote-phone');
+        var selectProjectType = document.getElementById('quote-project-type');
+        var selectCity = document.getElementById('quote-city');
+        var inputDetails = document.getElementById('quote-details');
+        var roleRadios = document.querySelectorAll('input[name="role"]');
+        var roleLabels = document.querySelectorAll('.role-option');
+        var submitBtn = document.getElementById('quote-submit-btn');
+        var submitSpinner = document.getElementById('quote-submit-spinner');
+        var submitLabel = document.getElementById('quote-submit-label');
+        var resetBtn = document.getElementById('quote-reset-btn');
+
+        var ERROR_ELS = {
+          name: document.getElementById('quote-name-error'),
+          phone: document.getElementById('quote-phone-error'),
+          role: document.getElementById('quote-role-error'),
+          projectType: document.getElementById('quote-project-type-error'),
+          city: document.getElementById('quote-city-error'),
+          details: document.getElementById('quote-details-error'),
+        };
+
+        var INPUT_ELS = {
+          name: inputName,
+          phone: inputPhone,
+          projectType: selectProjectType,
+          city: selectCity,
+          details: inputDetails,
+        };
+
+        function syncRoleStyles() {
+          roleLabels.forEach(function (label) {
+            var radio = label.querySelector('input[type="radio"]');
+            if (radio && radio.checked) {
+              label.classList.add('is-checked');
+            } else {
+              label.classList.remove('is-checked');
+            }
+          });
+        }
+
+        function getSelectedRole() {
+          var checked = '';
+          roleRadios.forEach(function (r) {
+            if (r.checked) checked = r.value;
+          });
+          return checked;
+        }
+
+        function setFieldError(field, message) {
+          var errEl = ERROR_ELS[field];
+          var inputEl = INPUT_ELS[field];
+          if (errEl) {
+            if (message) {
+              errEl.textContent = message;
+              errEl.hidden = false;
+            } else {
+              errEl.textContent = '';
+              errEl.hidden = true;
+            }
+          }
+          if (inputEl) {
+            inputEl.setAttribute('aria-invalid', message ? 'true' : 'false');
+            if (message) {
+              inputEl.classList.add('is-invalid');
+              inputEl.setAttribute('aria-describedby', errEl.id);
+            } else {
+              inputEl.classList.remove('is-invalid');
+              inputEl.removeAttribute('aria-describedby');
+            }
+          }
+        }
+
+        function clearAllErrors() {
+          Object.keys(ERROR_ELS).forEach(function (field) {
+            setFieldError(field, '');
+          });
+        }
+
+        function prefillQuoteForm(opts) {
+          quoteConfirmation.hidden = true;
+          quoteForm.hidden = false;
+
+          if (opts.role) {
+            roleRadios.forEach(function (radio) {
+              radio.checked = radio.value === opts.role;
+            });
+            syncRoleStyles();
+            setFieldError('role', '');
+          }
+
+          if (opts.projectType) {
+            selectProjectType.value = opts.projectType;
+            setFieldError('projectType', '');
+          }
+
+          scrollToQuote();
+        }
+
+        audienceQuoteBtn.addEventListener('click', function () {
+          prefillQuoteForm({ role: audienceQuoteBtn.getAttribute('data-role') });
+        });
+
+        inputName.addEventListener('input', function () {
+          setFieldError('name', '');
+        });
+        inputPhone.addEventListener('input', function () {
+          setFieldError('phone', '');
+        });
+        selectProjectType.addEventListener('change', function () {
+          setFieldError('projectType', '');
+        });
+        selectCity.addEventListener('change', function () {
+          setFieldError('city', '');
+        });
+        inputDetails.addEventListener('input', function () {
+          setFieldError('details', '');
+        });
+        roleRadios.forEach(function (radio) {
+          radio.addEventListener('change', function () {
+            syncRoleStyles();
+            setFieldError('role', '');
+          });
+        });
+
+        quoteForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          var values = {
+            name: inputName.value,
+            phone: inputPhone.value,
+            role: getSelectedRole(),
+            projectType: selectProjectType.value,
+            city: selectCity.value,
+            details: inputDetails.value,
+          };
+
+          var errors = validateQuoteValues(values);
+          clearAllErrors();
+
+          var errorKeys = Object.keys(errors);
+          if (errorKeys.length > 0) {
+            errorKeys.forEach(function (key) {
+              setFieldError(key, errors[key]);
+            });
+
+            var firstKey = errorKeys[0];
+            if (firstKey === 'role') {
+              document.getElementById('quote-role-architect').focus();
+            } else if (INPUT_ELS[firstKey]) {
+              INPUT_ELS[firstKey].focus();
+            }
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitSpinner.toggleAttribute('hidden', false);
+          submitLabel.textContent = 'Submitting Request...';
+
+          window.setTimeout(function () {
+            var now = new Date();
+            var timeStr = now.toLocaleTimeString('en-PK', {
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: true,
+            });
+            var refCode = buildReferenceCode(values.name, values.phone);
+
+            document.getElementById('conf-ref-line').textContent =
+              refCode + ' · Logged ' + timeStr + ' · 24-Hour Desk';
+            document.getElementById('conf-name').textContent = values.name.trim();
+            document.getElementById('conf-phone').textContent = values.phone.trim();
+            document.getElementById('conf-role').textContent = values.role;
+            document.getElementById('conf-city').textContent = values.city;
+            document.getElementById('conf-project-type').textContent =
+              values.projectType;
+            document.getElementById('conf-details').textContent =
+              values.details.trim();
+
+            submitBtn.disabled = false;
+            submitSpinner.toggleAttribute('hidden', true);
+            submitLabel.textContent = 'Submit Quote Request';
+
+            quoteForm.hidden = true;
+            quoteConfirmation.hidden = false;
+          }, 450);
+        });
+
+        resetBtn.addEventListener('click', function () {
+          quoteForm.reset();
+          syncRoleStyles();
+          clearAllErrors();
+          quoteConfirmation.hidden = true;
+          quoteForm.hidden = false;
+        });
+
+        /* ------------------------------------------------------------------
+           Footer Current Year
+           ------------------------------------------------------------------ */
+        var yearEl = document.getElementById('footer-year');
+        if (yearEl) {
+          yearEl.textContent = String(new Date().getFullYear());
+        }
+      })();
+    </script>
+  </body>
+</html>
